@@ -1,14 +1,14 @@
 # CSD_Aliens
 
-## Sample java testing repository for CSD week 4
+## Sample java testing repository for CSD
 
 This practical exercise will give you the opportunity to acquire practical experience of test driven development (TDD) in Java and working alongside another developer. You should leverage the collaboration tools within GitHub to assist you in completing this laboratory exercise.  
 
 ## Tasks for completion
 
   1. Decide on a team lead. The lead should:  
-  1.1. Clone this repository.  
-  1.2. Add the other team member(s) to the cloned repository.  
+  1.1. Fork this repository.  
+  1.2. Add the other team member(s) to the forked repository.  
   2. Examine the repository readme.md file and outline java classes Raygun and Alien. Allocate one of classes to be implemented to each team member. If the team has 3 members allocate the code to be developed appropriately.  
   3. Each team member should clone a local copy of the group repository.
   4. Configure the local IntelliJ project for testing, if necessary.

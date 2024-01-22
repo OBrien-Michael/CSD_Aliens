@@ -20,32 +20,58 @@ public class Raygun {
 
     //Class constructors
     public Raygun(int mChrg, int cChrg) {
-        //TODO: Construct the Raygun object and initialise the attributes
+        this.mChrg = mChrg;
+        if (cChrg <0)
+            this.cChrg = 0;
+        else
+            this.cChrg = Math.min(mChrg, cChrg);
+    }
+
+    //Getters and Setters
+    public int getMaximumCharge() {
+        return mChrg;
+    }
+
+    public void setMaximumCharge(int mChrg) {
+        this.mChrg = mChrg;
+    }
+
+    public int getCurrentCharge() {
+        return cChrg;
+    }
+
+    public void setCurrentCharge(int cChrg) {
+        this.cChrg = cChrg;
     }
 
     // Methods
-    //TODO: Implement appropriate getters and setters for the class
-
     public void fireAt(Alien a) {
-        //TODO: Implement the method
         /*The gun should only fire if it is charged. Firing the gun will reduce the charge by 1. If the alien isDodging
         * alien.miss() should be called, otherwise alien.hit */
-
+        if (isCharged()) {
+            cChrg--; // Opposite of ++
+            if (a.isDodging()) {
+                a.miss();
+            } else {
+                a.hit();
+            }
+        }
     }
 
     public void recharge() {
-        //TODO: Implement the method
         /*Increases the current charge by 1*/
+        if (cChrg < mChrg) {
+            cChrg++;
+        }
     }
 
     public boolean isCharged() {
-        //TODO: Implement the method
         /*Returns true if the gun has a charge*/
-
+        return cChrg > 0;
     }
 
     public boolean isFullyCharged() {
-        //TODO: Implement the method
         /*Returns true if the gun is fully charged*/
+        return cChrg == mChrg;
     }
 }

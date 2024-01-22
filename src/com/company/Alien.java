@@ -54,7 +54,6 @@ public class Alien {
 
     // Methods
     public void dodge() {
-        //TODO: Implement the method
         /*Set dodging to true if the alien is alive*/
         if (!dead) {
             dodging = true;
@@ -62,7 +61,6 @@ public class Alien {
     }
 
     public void hit() {
-        //TODO: Implement the method
         /*Reduces the alien health by 1. Minimum Alien health should 0.*/
         if (!dead) {
             alienHealth = Math.max(0, alienHealth - 1);
@@ -73,7 +71,6 @@ public class Alien {
     }
 
     public void miss() {
-        //TODO: Implement the method
         /*Sets dodging to false*/
         dodging = false;
     }
